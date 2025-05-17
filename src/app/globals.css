@@ -3,6 +3,23 @@
 
 @custom-variant dark (&:is(.dark *));
 
+@theme {
+  --breakpoint-xsm: 440px;
+  --breakpoint-ssm: 540px;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-2md: 832px;
+  --breakpoint-1md: 986px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-1lg: 1051px;
+  --breakpoint-2lg: 1150px;
+  --breakpoint-xxl: 1273px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-1xl: 1366px;
+  --breakpoint-2xl: 1536px;
+  --breakpoint-4k: 1600px;
+}
+
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -43,7 +60,7 @@
 
 :root {
   --radius: 0.625rem;
-  --background: oklch(1 0 0);
+  --background: oklch(98.73% 0.004 259.69);
   --foreground: oklch(20.07% 0.004 36.07);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.145 0 0);
@@ -58,7 +75,7 @@
   --accent: oklch(0.97 0 0);
   --accent-foreground: oklch(0.205 0 0);
   --destructive: oklch(0.577 0.245 27.325);
-  --border: oklch(91.76% 0.009 105.62);
+  --border: oklch(76.38% 0.035 259.57);
   --input: oklch(0.922 0 0);
   --ring: oklch(0.708 0 0);
   --chart-1: oklch(0.646 0.222 41.116);
@@ -66,13 +83,13 @@
   --chart-3: oklch(0.398 0.07 227.392);
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(92.68% 0.063 248.64);
+  --sidebar: oklch(88.88% 0.037 250.76);
   --sidebar-foreground: oklch(0.145 0 0);
   --sidebar-primary: oklch(0.205 0 0);
   --sidebar-primary-foreground: oklch(0.985 0 0);
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-border: oklch(88.47% 0.004 278.91);
   --sidebar-ring: oklch(0.708 0 0);
 }
 
@@ -117,4 +134,32 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+::-webkit-scrollbar {
+  display: flex;
+  width: 4px;
+}
+/* ::-webkit-scrollbar {
+  display: none;
+} */
+/* :hover::-webkit-scrollbar {
+  display: flex;
+  width: 6px;
+} */
+
+::-webkit-scrollbar-thumb {
+  @apply bg-transparent; /* Adjust scrollbar thumb color */
+  border-radius: 8px;
+}
+:hover::-webkit-scrollbar-thumb {
+  @apply bg-primary/10; /* Adjust scrollbar thumb color */
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent; /* Adjust scrollbar track color */
+}
+:hover::-webkit-scrollbar-track {
+  @apply bg-primary/5; /* Adjust scrollbar track color */
 }

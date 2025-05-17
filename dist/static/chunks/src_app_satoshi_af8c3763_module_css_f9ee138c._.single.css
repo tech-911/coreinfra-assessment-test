@@ -1,0 +1,21 @@
+/* [project]/src/app/satoshi_af8c3763.module.css [app-client] (css) */
+@font-face {
+  font-family: satoshi;
+  src: url("../media/Satoshi_Variable-s.p.f9c29cb1.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: satoshi Fallback;
+  src: local(Arial);
+  ascent-override: 92.36%;
+  descent-override: 21.95%;
+  line-gap-override: 9.14%;
+  size-adjust: 109.35%;
+}
+
+.satoshi_af8c3763-module__OEOLLG__className {
+  font-family: satoshi, satoshi Fallback;
+}
+
+/*# sourceMappingURL=src_app_satoshi_af8c3763_module_css_f9ee138c._.single.css.map*/

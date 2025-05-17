@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\n  \"app\": {\n    \"[project]/src/app/(dashboard)/dashboard/page\": [\n      \"static/media/Satoshi_Variable-s.p.f9c29cb1.ttf\"\n    ],\n    \"[project]/src/app/_not-found/page\": [\n      \"static/media/Satoshi_Variable-s.p.f9c29cb1.ttf\"\n    ]\n  },\n  \"appUsingSizeAdjust\": true,\n  \"pages\": {},\n  \"pagesUsingSizeAdjust\": false\n}"

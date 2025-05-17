@@ -1,0 +1,10 @@
+{
+  "pages": {},
+  "app": {
+    "[project]/src/app/(dashboard)/dashboard/page": [
+      "static/media/Satoshi_Variable-s.p.f9c29cb1.ttf"
+    ]
+  },
+  "appUsingSizeAdjust": true,
+  "pagesUsingSizeAdjust": false
+}
