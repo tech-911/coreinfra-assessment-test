@@ -38,7 +38,7 @@ function SideBar() {
           }`}
         />
         <p
-          className={`text-base xl:text-xl font-medium group-hover:text-primary ${
+          className={`text-sm xl:text-sm font-medium group-hover:text-primary ${
             pathname === "/dashboard"
               ? "text-primary"
               : "text-sidebar-foreground"
@@ -57,7 +57,7 @@ function SideBar() {
                 section === "MAIN MENU" ? "border-b border-b-[#ffffff1d]" : ""
               }`}
             >
-              <p className="text-sidebar-foreground text-xs xl:text-base lg:pl-[24px] font-[500] pl-[16px]">
+              <p className="text-sidebar-foreground text-xs xl:text-xs lg:pl-[24px] font-[500] pl-[16px]">
                 {section}
               </p>
               <div className="flex flex-col items-start gap-[4px] w-full">
@@ -80,7 +80,7 @@ function SideBar() {
                         }`}
                       />
                       <p
-                        className={`text-sm xl:text-xl font-medium group-hover:text-primary ${
+                        className={`text-sm xl:text-sm font-medium group-hover:text-primary ${
                           pathname === path
                             ? "text-primary"
                             : "text-sidebar-foreground"
@@ -105,7 +105,7 @@ function SideBar() {
           className={`group-hover:text-primary text-sidebar-foreground`}
         />
         <p
-          className={`text-base xl:text-xl font-medium group-hover:text-primary text-sidebar-foreground`}
+          className={`text-sm xl:text-sm font-medium group-hover:text-primary text-sidebar-foreground`}
         >
           Logout
         </p>
