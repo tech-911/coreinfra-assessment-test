@@ -14,7 +14,7 @@ import LineGraphComponent from "./components/lineGraphComponent";
 import DiagramLegend from "./components/Legend";
 import PieChartComponent from "./components/pieChartComponent";
 import { DataTable } from "./components/Table/table";
-import {  columns } from "./components/Table/columns";
+import { columns } from "./components/Table/columns";
 import { useRouter } from "next/navigation";
 import { data } from "./components/Table/data";
 
@@ -55,7 +55,7 @@ function Dashboard() {
   return (
     <DashContainer>
       {/* -----header */}
-      <div className="flex flex-row items-start justify-between w-full">
+      <div className="flex flex-col xsm:flex-row items-start justify-between gap-5 sm:gap-1.5 w-full">
         <div className="flex flex-col gap-1.5">
           <h1 className="text-lg font-bold text-foreground">
             Hi Nazeer, what would you like to do today?
@@ -124,9 +124,9 @@ function Dashboard() {
       {/* -----Analytics charts */}
       <div className="w-full flex flex-row items-start gap-2 mt-2 flex-wrap">
         {/* -----Left chart set */}
-        <div className="flex flex-col items-start gap-2 flex-1">
+        <div className="flex flex-col items-start gap-2 w-full flex-1">
           {/* -----Bar Chart */}
-          <CardsContainer className="min-w-[508px] basis-[508px] flex-1 p-0">
+          <CardsContainer className="min-w-[300px] 1md:min-w-[208px] flex-1 p-0">
             <div className="w-full flex flex-col items-center gap-[14px]">
               <ChatHead heading="Monthly Issuance" />
               {/* -----rechart Bar Chart */}
@@ -140,7 +140,7 @@ function Dashboard() {
             </div>
           </CardsContainer>
           {/* -----Line Graph */}
-          <CardsContainer className="min-w-[508px] basis-[508px] flex-1 py-4 px-3">
+          <CardsContainer className="1md:min-w-[208px] flex-1 py-4 px-3">
             <div className="w-full flex flex-col items-center gap-[22px]">
               <ChatHead heading="This Week’s Income" />
               {/* -----rechart Line Graph */}
@@ -151,9 +151,9 @@ function Dashboard() {
           </CardsContainer>
         </div>
         {/* -----right chart set */}
-        <div className="flex flex-col items-start gap-2 flex-1">
+        <div className="flex flex-col items-start gap-2 w-full ssm:flex-1">
           {/* -----table card*/}
-          <CardsContainer className="min-w-[508px] basis-[508px] flex-1 py-4 px-3">
+          <CardsContainer className="1md:min-w-[208px] w-full ssm:flex-1 py-4 px-3">
             <div className="w-full flex flex-col items-center gap-[22px]">
               <ChatHead heading="Recent Card Requests" />
               {/* -----main table */}
@@ -163,14 +163,14 @@ function Dashboard() {
             </div>
           </CardsContainer>
           {/* -----Pie Chart */}
-          <CardsContainer className="min-w-[508px] basis-[508px] flex-1 py-4 px-3">
+          <CardsContainer className="1md:min-w-[208px] flex-1 py-4 px-3">
             <div className="w-full flex flex-col items-center gap-[22px]">
               <ChatHead heading="Card Status Distribution" canResize={false} />
               {/* -----rechart Pie Chart */}
               <div className="w-full">
                 <PieChartComponent />
               </div>
-              <div className="h-10 w-full flex flex-row items-center justify-center gap-6">
+              <div className="h-10 w-full px-2.5 flex flex-row items-center justify-center gap-2.5 xsm:gap-6 flex-wrap">
                 {pieLegendData?.map(({ classNameDot, id, text }) => {
                   return (
                     <DiagramLegend

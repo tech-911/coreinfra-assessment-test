@@ -11,7 +11,9 @@ function DashContainer({
   children: React.ReactNode;
 }) {
   return (
-    <div className={cn("px-5 pt-2 pb-5 bg-transparent w-full", className)}>
+    <div
+      className={cn("px-5 sm:pt-2 pt-5 pb-5 bg-transparent w-full", className)}
+    >
       {children}
     </div>
   );

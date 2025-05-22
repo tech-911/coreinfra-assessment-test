@@ -22,7 +22,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { Payment } from "./columns";
-import styles from "./table.module.scss";
+import "./table.scss";
 
 export function DataTable({
   data,
@@ -59,8 +59,8 @@ export function DataTable({
   });
 
   return (
-    <div className={styles.tableContainer}>
-      <div className={styles.tablewrapper}>
+    <div className="tableContainer">
+      <div className="tablewrapper">
         <Table>
           <TableHeader className="bg-secondary/40">
             {table.getHeaderGroups().map((headerGroup, id) => (

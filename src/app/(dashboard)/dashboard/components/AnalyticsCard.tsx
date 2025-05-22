@@ -17,7 +17,7 @@ function AnalyticsCard({
   return (
     <CardsContainer
       key={id}
-      className="min-w-[250px] max-w-[300px] basis-[250px] flex-1 py-4 px-3"
+      className="min-w-[240px] ssm:max-w-[300px] 1xl:max-w-full flex-1 py-4 px-3"
     >
       <div className="w-full flex flex-col items-start gap-3">
         <div className="flex flex-col items-start gap-1">

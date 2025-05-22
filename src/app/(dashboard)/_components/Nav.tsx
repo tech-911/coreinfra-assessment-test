@@ -5,13 +5,16 @@ import { usePathname } from "next/navigation";
 import { Icon } from "@iconify/react";
 import { Input } from "@/components/ui/input";
 import Home from "@/assets/sidebar-svgs/dashboard.svg";
+import MobileSideButton from "./mobileSideButton";
 
 export default function Nav() {
   const pathname = usePathname();
   return (
-    <div className="min-h-[48px] z-[1] bg-card w-full flex flex-row items-center justify-between border-b border-b-ring px-[21.34px]">
+    <div className="sm:min-h-[48px] min-h-[60px] z-[1] bg-card w-full flex flex-row items-center justify-between border-b border-b-ring px-[21.34px]">
       <div className="flex flex-row items-center gap-3">
-        <Home className="text-foreground" />
+        <Home className="text-foreground sm:flex hidden" />
+
+        <MobileSideButton />
         <p className="xl:text-base text-base font-medium text-foreground/70 sm:flex hidden">
           {pathname === "/dashboard"
             ? "Dashboard"
@@ -24,7 +27,7 @@ export default function Nav() {
       </div>
 
       <div className="flex flex-row items-center gap-7 xxl:gap-10">
-        <div className="flex relative">
+        <div className="relative sm:flex hidden">
           <Input
             className="border-searchBorder min-w-[214px] w-full pl-9 rounded-[20px] h-[32px] placeholder:text-foreground text-foreground"
             type="text"
